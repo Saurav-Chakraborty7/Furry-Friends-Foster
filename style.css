@@ -1,0 +1,429 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+
+nav .logo {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+  padding-top: 13px;
+}
+
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 5px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #111;
+  background: #fff;
+}
+
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+
+  #click:checked~.menu-btn i:before {
+    content: "\f00d";
+  }
+
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  #click:checked~ul {
+    left: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  #click:checked~ul li a {
+    margin-left: 0px;
+  }
+
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: cyan;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+
+.content div {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Quicksand';
+  margin: 0;
+  padding: 0;
+  height: 642px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.bg-image {
+  background-image: url(./img/bg2.jpg);
+  height: 700px;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+
+/*Finding forever homes for furry friends*/
+.headline-1 {
+  color: #616161;
+  text-align: center;
+  font-size: 41px;
+  font-family: 'Quicksand';
+  padding-top: 10%;
+}
+
+.headline-2 {
+  color: #607D8B;
+  text-align: center;
+  font-size: 21px;
+  font-family: 'Quicksand';
+  padding-top: 2%;
+  margin-bottom: -8px;
+  font-weight: 600;
+}
+
+/* search bar */
+#search-form {
+  width: 553px;
+  height: 40px;
+  position: relative;
+  margin: 20px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #F5F5F5;
+
+}
+
+#search-form input[type="text"] {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px 0 10px;
+  border: none;
+  font-size: 19px;
+  outline: none;
+}
+
+#search-form button[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 26px;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding-right: 30px;
+}
+
+#search-form button[type="submit"] i {
+  font-size: 20px;
+  color: black;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+  #search-form {
+    width: 90%;
+    /* to make the search bar take up less width on smaller screens */
+  }
+}
+
+
+
+/* cards */
+.card-container {
+  display: flex;
+  /* to make the card container a flex container */
+  flex-wrap: wrap;
+  /* to make the card container wrap on smaller screens */
+  justify-content: center;
+  /* to center the cards horizontally */
+}
+
+.card {
+  max-height: 300px;
+  /* to set the height of the card */
+  width: 213px;
+  /* to set the width of the card */
+  margin: 20px;
+  margin-top: 2%;
+  /* to add margin between the cards */
+  display: flex;
+  /* to make the card a flex container */
+  flex-direction: column;
+  /* to make the card have its contents in a column */
+  align-items: center;
+  /* to center the image and text vertically */
+  position: relative;
+}
+
+
+.card a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.card img {
+  padding-top: 20px;
+  width: 70px;
+  /* to make the image take up full width */
+}
+
+.card-content {
+  width: 100%;
+  /* to make the text take up full width */
+  padding: 20px;
+  /* to add padding */
+  text-align: center;
+  /* to center the text */
+}
+
+.card-content h2 {
+  margin: 0;
+  /* to remove margin */
+  font-size: 21px;
+  font-family: 'Quicksand';
+  font-weight: 600;
+  /* to set font size */
+}
+
+.card-content p {
+  margin: 0;
+  /* to remove margin */
+  font-size: 14px;
+  /* to set font size */
+}
+
+/* Media query for responsive design */
+
+.divider {
+  width: 1145px;
+  height: 1px;
+  background-color: #000;
+  margin: auto;
+  margin-top: 50px;
+
+}
+
+@media (max-width: 1145px) {
+  .divider {
+    width: 100%;
+  }
+}
+
+
+
+.what-is {
+  color: black;
+  text-align: center;
+  font-size: 21px;
+  font-family: 'Quicksand';
+  padding-top: 2%;
+  font-weight: 600;
+}
+
+#about-sec {
+  padding-top: 3%;
+}
+
+
+@media (max-width: 1145px) {
+  .divider {
+    height: 100%;
+  }
+}
+
+#about-us {
+  margin: 200px 0;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  position: relative;
+  
+}
+
+.title1 {
+  font-size: 41px;
+}
+
+
+.about-img img {
+  margin: auto;
+  display: block;
+}
+
+#services {
+  background-color: antiquewhite;
+  margin: 200px 0;
+  padding-bottom: 110px;
+  padding-top: 110px;
+  position: relative;
+  
+}
+
+.title2 {
+  font-size: 41px;
+  padding-bottom: 5%;
+  font-weight: 600;
+}
+
+.hell1 {
+  text-align: center;
+}
+
+
+.hell2 {
+  text-align: center;
+}
+
+.hell3 {
+  text-align: center;
+}
+
+
+#price{
+  padding-bottom: 50px;
+  padding-top: 30px;
+  position: relative;
+}
+
+hr.solid {
+  border-top: 3px solid black;
+}
+
+.p_details{
+  font-size: 105px;
+}
+
+.w{
+  align-items: center;
+}
+
+/* .hi{
+  width: 64px;
+  height: 64px;
+} */
+
+.custom_card{
+  background-color: #F7E7D0;
+  height: 290px;
+  width: 90%;
+}
+@media (max-width: 767px) {
+  .custom_card{
+    width: 50%;
+    margin: 10px auto;
+  }
+}
+
+
+#footer{
+  background-color: #F7E7D0;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
